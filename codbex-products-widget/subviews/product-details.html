@@ -7,22 +7,60 @@
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
         <script type="text/javascript" src="../services/top-products.js"></script>
         <theme></theme>
-        <script type="text/javascript" src="../js/top-products.js"></script>
+        <script type="text/javascript" src="../js/top-products-controller.js"></script>
+        <link type="text/css" rel="stylesheet"
+            href="/services/js/resources-core/services/loader.js?id=application-view-css" />
         <!-- <script type="text/javascript" src="/webjars/chart.js/4.4.3/dist/chart.umd.js"></script> -->
 
-    
-</head>
 
-<body fd-scrollbar class="fd-padding-begin-end--tiny">
-    <fd-panel expanded="true" class="fd-col fd-col--12">
+    </head>
 
-        <fd-panel-content aria-label="Products Content">
+    <body fd-scrollbar class="fd-padding-begin-end--tiny">
+        <fd-panel expanded="true" class="fd-col fd-col--12">
 
-            <div class="fd-row" style="margin: 0.5em">
-            </div>
-        </fd-panel-content>
-    </fd-panel>
+            <fd-panel-content aria-label="Products Content">
 
-</body>
+                <div class="fd-row" style="margin: 0.5em">
+                    <div class="fd-col fd-col--12 fd-col-md--6 fd-col-lg--6 fd-col-xl--6">
+                        <fd-card card-type="table">
+                            <fd-card-header ng-click="openPerspective('products')">
+                                <fd-card-title>Product Details</fd-card-title>
+                            </fd-card-header>
+                            <fd-card-content>
+                                <table fd-table inner-borders="horizontal" outer-borders="none"
+                                    style="min-height:12.5rem">
+                                    <tbody fd-table-body>
+                                        <tr fd-table-row>
+                                            <td fd-table-cell class="fd-padding--none" width="50%">
+                                                <fd-list>
+                                                    <fd-list-item>
+                                                        <div class="dg-hbox dg-full-width">
+                                                            <span style="flex:1">Product Categories</span>
+                                                            <span>{{ProductData.ActiveCategories}}</span>
+                                                        </div>
+                                                    </fd-list-item>
+                                                    <fd-list-item class="dg-no-border-bottom">
+                                                        <div class="dg-hbox dg-full-width">
+                                                            <span style="flex:1">All Products</span>
+                                                            <span>{{ProductData.AllProducts}}</span>
+                                                        </div>
+                                                    </fd-list-item>
+                                                </fd-list>
+                                            </td>
+                                            <td fd-table-cell width="50%">
+                                                <!-- Right section for doughnut chart -->
+                                                <canvas id="doughnutChart" width="200" height="200"></canvas>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </fd-card-content>
+                        </fd-card>
+                    </div>
+                </div>
+            </fd-panel-content>
+        </fd-panel>
+
+    </body>
 
 </html>

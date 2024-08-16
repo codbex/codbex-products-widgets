@@ -1,9 +1,7 @@
-//THIS WILL ONLY WORK LOCALLY IF IT IS ADDED GITHUB AUTH
-
 const dashboard = angular.module('topProducts', []);
 
 dashboard.controller('TopProductsController', ['$scope', '$http', '$document', function ($scope, $http, $document) {
-    const productServiceUrl = "https://hestia.eu1.codbex.com/services/ts/codbex-hestia/api/ProductService.ts/productData";
+    const productServiceUrl = "/services/ts/codbex-hestia/api/ProductService.ts/productData";
     $http.get(productServiceUrl)
         .then(function (response) {
             $scope.ProductData = response.data;
@@ -11,7 +9,7 @@ dashboard.controller('TopProductsController', ['$scope', '$http', '$document', f
 
     async function getProductData() {
         try {
-            const response = await $http.get("https://hestia.eu1.codbex.com/services/ts/codbex-hestia/api/ProductService.ts/productData");
+            const response = await $http.get("/services/ts/codbex-hestia/api/ProductService.ts/productData");
             return response.data;
         } catch (error) {
             console.error('Error fetching product data:', error);
