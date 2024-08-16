@@ -1,0 +1,134 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" ng-app="topProducts" ng-controller="TopProductsController">
+
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+        <script type="text/javascript" src="../services/top-products.js"></script>
+        <theme></theme>
+        <script type="text/javascript" src="../js/top-products.js"></script>
+        <!-- <script type="text/javascript" src="/webjars/chart.js/4.4.3/dist/chart.umd.js"></script> -->
+
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+            }
+    
+            .fd-panel {
+                margin: 1em;
+                padding: 1em;
+                border-radius: 5px;
+            }
+    
+            .fd-card {
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                overflow: hidden;
+            }
+    
+            .fd-card-header {
+                background-color: #f5f5f5;
+                padding: 1em;
+                cursor: pointer;
+            }
+    
+            .fd-card-title {
+                font-size: 1.5em;
+                margin: 0;
+            }
+    
+            .fd-card-content {
+                padding: 1em;
+            }
+    
+            .fd-table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+    
+            .fd-table__header {
+                background-color: #f5f5f5;
+            }
+    
+            .fd-table__row {
+                border-bottom: 1px solid #ddd;
+            }
+    
+            .fd-table__cell {
+                padding: 0.5em;
+                text-align: left;
+            }
+    
+            .fd-button {
+                border: none;
+                background-color: #007bff;
+                color: white;
+                padding: 0.5em 1em;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 0.9em;
+            }
+    
+            .fd-button--compact {
+                font-size: 0.8em;
+                padding: 0.4em 0.8em;
+            }
+    
+            .fd-link {
+                color: #007bff;
+                text-decoration: none;
+            }
+    
+            .fd-link:hover {
+                text-decoration: underline;
+            }
+        </style>
+    
+    </head>
+    
+    <body fd-scrollbar class="fd-padding-begin-end--tiny">
+        <fd-panel expanded="true" class="fd-col fd-col--12">
+    
+            <fd-panel-content aria-label="Products Content">
+    
+                <div class="fd-row" style="margin: 0.5em">
+                    <div class="fd-col fd-col--12 fd-col-md--6 fd-col-lg--6 fd-col-xl--6">
+                        <fd-card card-type="table">
+                            <fd-card-header ng-click="openPerspective('products')">
+                                <fd-card-title>Top Products</fd-card-title>
+                            </fd-card-header>
+                            <fd-card-content>
+                                <table class="fd-table fd-table--no-horizontal-borders fd-table--no-vertical-borders">
+                                    <thead class="fd-table__header">
+                                        <tr class="fd-table__row">
+                                            <th class="fd-table__cell">Product</th>
+                                            <th class="fd-table__cell">
+                                                <button class="fd-button fd-button--compact"
+                                                        ng-click="displayByUnits()">By Units</button>
+                                            </th>
+                                            <th class="fd-table__cell">
+                                                <button class="fd-button fd-button--compact"
+                                                        ng-click="displayByRevenue()">By Revenue</button>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="fd-table__body" id="top_products">
+                                        <tr ng-repeat="next in displayedProducts">
+                                            <td class="fd-table__cell">
+                                                <a class="fd-link"><span class="fd-link__content">{{next.productName}}</span></a>
+                                            </td>
+                                            <td class="fd-table__cell">{{next.unitCount}}</td>
+                                            <td class="fd-table__cell">{{next.revenue}}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </fd-card-content>
+                        </fd-card>
+                    </div>
+                </div>
+            </fd-panel-content>
+        </fd-panel>
+    </body>
+    
+    </html>
