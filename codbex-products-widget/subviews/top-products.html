@@ -1,90 +1,30 @@
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" ng-app="topProducts" ng-controller="TopProductsController">
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" ng-app="top-products" ng-controller="TopProductsController">
 
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+        <link rel="icon" sizes="any" href="data:;base64,iVBORw0KGgo=">
+        <title dg-view-title></title>
         <script type="text/javascript" src="../services/top-products.js"></script>
         <theme></theme>
+        <script type="text/javascript" src="/services/js/resources-core/services/loader.js?id=application-view-js">
+        </script>
+        <link type="text/css" rel="stylesheet"
+            href="/services/js/resources-core/services/loader.js?id=application-view-css" />
+        <script type="text/javascript" src="/webjars/chart.js/dist/chart.umd.js"></script>
         <script type="text/javascript" src="../js/top-products-controller.js"></script>
-        <!-- <script type="text/javascript" src="/webjars/chart.js/4.4.3/dist/chart.umd.js"></script> -->
 
-        <!-- <style>
-            body {
-                font-family: Arial, sans-serif;
+        <style>
+            .tile-auto-layout {
+                min-height: auto;
+                height: auto;
+                width: auto;
+                max-width: 100%;
             }
-    
-            .fd-panel {
-                margin: 1em;
-                padding: 1em;
-                border-radius: 5px;
-            }
-    
-            .fd-card {
-                border: 1px solid #ddd;
-                border-radius: 5px;
-                overflow: hidden;
-            }
-    
-            .fd-card-header {
-                background-color: #f5f5f5;
-                padding: 1em;
-                cursor: pointer;
-            }
-    
-            .fd-card-title {
-                font-size: 1.5em;
-                margin: 0;
-            }
-    
-            .fd-card-content {
-                padding: 1em;
-            }
-    
-            .fd-table {
-                width: 100%;
-                border-collapse: collapse;
-            }
-    
-            .fd-table__header {
-                background-color: #f5f5f5;
-            }
-    
-            .fd-table__row {
-                border-bottom: 1px solid #ddd;
-            }
-    
-            .fd-table__cell {
-                padding: 0.5em;
-                text-align: left;
-            }
-    
-            .fd-button {
-                border: none;
-                background-color: #007bff;
-                color: white;
-                padding: 0.5em 1em;
-                border-radius: 5px;
-                cursor: pointer;
-                font-size: 0.9em;
-            }
-    
-            .fd-button--compact {
-                font-size: 0.8em;
-                padding: 0.4em 0.8em;
-            }
-    
-            .fd-link {
-                color: #007bff;
-                text-decoration: none;
-            }
-    
-            .fd-link:hover {
-                text-decoration: underline;
-            }
+
         </style>
-     -->
     </head>
 
     <body fd-scrollbar class="fd-padding-begin-end--tiny">

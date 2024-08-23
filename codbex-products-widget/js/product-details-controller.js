@@ -1,6 +1,6 @@
-const dashboard = angular.module('productDetails', []);
+const dashboard = angular.module('product-details', ['ideUI', 'ideView']);
 
-dashboard.controller('TopProductsController', ['$scope', '$http', '$document', function ($scope, $http, $document) {
+dashboard.controller('ProductDetailsController', ['$scope', '$http', '$document', function ($scope, $http, $document) {
     angular.element($document[0]).ready(async function () {
         const productData = await getProductData();
         // Doughnut Chart Data

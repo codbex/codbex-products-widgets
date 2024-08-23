@@ -1,4 +1,4 @@
-const dashboard = angular.module('topProducts', []);
+const dashboard = angular.module('top-products', ['ideUI', 'ideView']);
 
 dashboard.controller('TopProductsController', ['$scope', '$http', '$document', function ($scope, $http, $document) {
     const productServiceUrl = "/services/ts/codbex-hestia/api/ProductService.ts/productData";
