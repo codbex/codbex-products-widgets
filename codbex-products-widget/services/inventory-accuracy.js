@@ -1,4 +1,4 @@
-const viewData = {
+const widgetData = {
     id: 'inventory-accuracy',
     label: 'Inventory Accuracy',
     link: '/services/web/codbex-orders-widgets/subviews/inventory-accuracy.html',
@@ -6,7 +6,7 @@ const viewData = {
 };
 
 if (typeof exports !== 'undefined') {
-    exports.getView = function () {
-        return viewData;
+    exports.getWidget = function () {
+        return widgetData;
     }
 }

@@ -1,4 +1,4 @@
-const viewData = {
+const widgetData = {
     id: 'top-products',
     label: 'Top products',
     link: '/services/web/codbex-orders-widgets/subviews/top-products.html',
@@ -6,7 +6,7 @@ const viewData = {
 };
 
 if (typeof exports !== 'undefined') {
-    exports.getView = function () {
-        return viewData;
+    exports.getWidget = function () {
+        return widgetData;
     }
 }
