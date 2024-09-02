@@ -1,7 +1,7 @@
 const widgetData = {
     id: 'top-products',
     label: 'Top products',
-    link: '/services/web/codbex-orders-widgets/subviews/top-products.html',
+    link: '/services/web/codbex-products-widgets/subviews/top-products.html',
     lazyLoad: true,
     order: 15
 };

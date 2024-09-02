@@ -1,5 +1,5 @@
 {
     "extensionPoint": "portal-widgets",
-    "module": "codbex-orders-widgets/services/product-details.js",
+    "module": "codbex-products-widgets/services/product-details.js",
     "description": "Product details"
 }

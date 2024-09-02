@@ -1,5 +1,5 @@
 {
     "extensionPoint": "portal-widgets",
-    "module": "codbex-orders-widgets/services/inventory-accuracy.js",
+    "module": "codbex-products-widgets/services/inventory-accuracy.js",
     "description": "Inventory accuracy"
 }
