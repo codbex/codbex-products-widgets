@@ -3,7 +3,8 @@ const widgetData = {
     label: 'Top products',
     link: '/services/web/codbex-products-widgets/subviews/top-products.html',
     lazyLoad: true,
-    order: 15
+    order: 15,
+    size: "medium"
 };
 
 export function getWidget() {
